@@ -148,7 +148,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>
-						com.mx.banobras.api.tokenizer.BanobrasApiTokenizerApplication
+						mx.gob.banobras.apitokenizer.ApiTokenizerApplication
 					</mainClass>
 				</configuration>
 			</plugin>
