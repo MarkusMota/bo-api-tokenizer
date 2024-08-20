@@ -21,20 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-@CrossOrigin(originPatterns = { "*" })
-@RestController
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 public class ApiTokenizerApplication implements CommandLineRunner{
 	
 	/** Variable para imprimir los logs */
 	private static final Log LOG = LogFactory.getLog(ApiTokenizerApplication.class);
 
-	
-	@GetMapping("/hola")
-	public String getMessage() {
-		return "Hola Mundo----";
-	}
-	
 	/**
 	 * Metodo principal para levantar la aplicacion.
 	 * 
