@@ -15,26 +15,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
-@RestController
-@CrossOrigin(originPatterns = { "*" })
 public class ApiTokenizerApplication implements CommandLineRunner{
 	
 	/** Variable para imprimir los logs */
 	private static final Log LOG = LogFactory.getLog(ApiTokenizerApplication.class);
-
-	
-	@GetMapping("/hola")
-	public String getMessage() {
-		return "Hola Mundo----";
-	}
-	
 	
 	/**
 	 * Metodo principal para levantar la aplicacion.
