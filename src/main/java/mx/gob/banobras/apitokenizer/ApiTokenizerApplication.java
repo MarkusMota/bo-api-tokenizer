@@ -22,11 +22,20 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+@RestController
+@CrossOrigin(originPatterns = { "*" })
 public class ApiTokenizerApplication implements CommandLineRunner{
 	
 	/** Variable para imprimir los logs */
 	private static final Log LOG = LogFactory.getLog(ApiTokenizerApplication.class);
 
+	
+	@GetMapping("/hola")
+	public String getMessage() {
+		return "Hola Mundo----";
+	}
+	
+	
 	/**
 	 * Metodo principal para levantar la aplicacion.
 	 * 
