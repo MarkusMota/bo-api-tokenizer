@@ -85,21 +85,20 @@ public class TokenizerCasoUsoServiceImpl implements ITokenizerCasoUsoService {
 			if (tokenizerDTO.getCredentials().isEmpty()) {
 				throw new IllegalArgumentException(ConstantsToken.MSG_CREDENTIALS_EMPTY.getName());
 			}
-			//tokenizerDTO = cipherAESCommon.getDataCredentials(tokenizerDTO);
+			tokenizerDTO = cipherAESCommon.getDataCredentials(tokenizerDTO);
 			
-			tokenizerDTO.setUserName("marcos");
 			log.info(new StringBuilder().append("Busca el usuairo en LDAP: ").append(tokenizerDTO.getUserName()));
 
 			/** Busca el usuario que exista en LDAP */
-			//ldapResponseDTO = iLdapApiRestClient.authorizationLDAP(tokenizerDTO);
+			ldapResponseDTO = iLdapApiRestClient.authorizationLDAP(tokenizerDTO);
 			
-			LdapDTO dataLdapVO =  new LdapDTO("usuario01","*****","10001","20002","usuario01 prueba",
+/*			LdapDTO dataLdapVO =  new LdapDTO("usuario01","*****","10001","20002","usuario01 prueba",
 					"Experto Técnico", "Area Prueba", "1530", 1, "usuario01@banobras.gob.mx", "Usuario01Prueba@banobras.gob.mx",
 					null, null, null);
 			ldapResponseDTO = new LdapResponseDTO();
 			ldapResponseDTO.setLdapDTO(dataLdapVO);
 			ldapResponseDTO.setStatusCode(200);
-			
+	*/		
 
 			/** Si encontro el usuario continua para generar el token */
 			if (ldapResponseDTO.getStatusCode() == 200) {
