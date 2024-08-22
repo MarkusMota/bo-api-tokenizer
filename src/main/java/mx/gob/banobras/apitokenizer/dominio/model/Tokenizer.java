@@ -57,6 +57,7 @@ public class Tokenizer {
 	/** Variable que contiene la ruta del certificado privado */
 	@Value("${app.file.privatekey}")
 	String filePrivateKey;
+	
 	/** Variable que contiene la ruta del certificado publico */
 	@Value("${app.file.publickey}")
 	String filePublicKey;

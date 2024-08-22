@@ -88,7 +88,8 @@ public class LdapRestClientImpl implements ILdapApiRestClient {
 
 		HttpRequest request = HttpRequest.newBuilder()
 				.setHeader("credentials", tokenizerDTO.getCredentials())
-				.setHeader("app-name", tokenizerDTO.getAppName()).setHeader("consumer-id", tokenizerDTO.getConsumerId())
+				.setHeader("app-name", tokenizerDTO.getAppName())
+				.setHeader("consumer-id", tokenizerDTO.getConsumerId())
 				.setHeader("functional-id", tokenizerDTO.getFunctionalId())
 				.setHeader("transaction-id", tokenizerDTO.getTransactionalId())
 				.uri(URI.create(urlLdapAuth))

@@ -92,7 +92,8 @@ public class TokenizerController implements ITokenizerController {
 			
 			
 			/** Inicializa el obejto con los valores de header */
-			tokenizerDTO = new TokenizerDTO(credentials, null, null, null, appName, consumerId, functionalId,
+			tokenizerDTO = new TokenizerDTO(credentials, null, null, null, 
+					appName, consumerId, functionalId,
 					transactionId, timeRefreshToken);
 
 			log.info("Invoca la intefaz para obtiener el token");
